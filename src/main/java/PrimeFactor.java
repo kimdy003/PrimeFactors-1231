@@ -17,9 +17,10 @@ public class PrimeFactor {
                     factors.add(divisor);
                     number /= divisor;
                 }
-                while(number % 3 == 0){
-                    factors.add(3);
-                    number /= 3;
+                divisor++;
+                while(number % divisor == 0){
+                    factors.add(divisor);
+                    number /= divisor;
                 }
             } else{
                 factors.add(number);
